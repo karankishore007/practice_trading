@@ -22,8 +22,8 @@ to_date_str='2025-03-10'
 
 # daily_data = history.historical_daily_data(security_id='1333', exchange_segment=dhanhq.NSE, 
 #                                      instrument_type='INDEX', expiry_code=0, from_date=from_date_str, to_date=to_date_str)
-intra_day_data = dhan.intraday_minute_data(security_id='13', exchange_segment=dhanhq.INDEX, 
-                                     instrument_type='INDEX', interval=5, from_date=from_date_str, to_date=to_date_str)
+intra_day_data = dhan.intraday_minute_data(security_id='22', exchange_segment=dhanhq.NSE, 
+                                     instrument_type='EQUITY', interval=5, from_date=from_date_str, to_date=to_date_str)
 intra_day_df = pd.DataFrame(intra_day_data['data'])
 intra_day_df.to_csv('intra_day_data_nifty_test.csv', index=False)
 
